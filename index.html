@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header></header>
+  <main class="container">
+    <figure class="advice">
+      <figcaption class="advice__id">
+      </figcaption>
+      <blockquote class="advice__text">
+        Do you need advice? Press the button!
+      </blockquote>
+    </figure>
+    <picture class="container__divider">
+      <source alt="" media="(max-width:500px)"srcset="images/pattern-divider-mobile.svg">
+      <img alt="" srcset="images/pattern-divider-desktop.svg">
+    </picture>
+    <button class="advice-generator">
+      <img alt="generate new advice" src="images/icon-dice.svg">
+    </button>
+  </main>
+  <footer></footer>
+</body>
+</html>
+
+<script src="js/adviceRequest.js"></script>

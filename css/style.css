@@ -1,0 +1,143 @@
+:root
+{
+    /*  Colours-Primary*/
+--Light-Cyan: hsl(193, 38%, 86%);/* Advice text*/
+--Neon-Green: hsl(150, 100%, 66%);
+
+    /*  Colours-Primary*/
+font-size: clamp(1rem, 0.75rem + 1vw,2rem);
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);/* advice background*/
+--Dark-Blue: hsl(218, 23%, 16%);/*Body color*/
+
+}
+
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--Dark-Blue);
+    color:var(--Light-Cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+
+.container
+{
+    background-color: var(--Dark-Grayish-Blue);
+    display: grid;
+    grid-template-areas:
+        "advice"
+        "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:3.68fr 1fr ;
+
+    height: clamp(200px,50vh,2000px);
+    width: clamp(200px,40vw,2000px);
+    border-radius: 25px;
+    padding: 1rem;
+    position: relative;
+}
+.container__divider
+{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+}
+.container__divider img
+{
+    max-inline-size: 100%;
+    block-size: auto;
+
+}
+
+.advice
+{   grid-area: advice;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.advice__id
+{
+    text-transform: uppercase;
+    color: var(--Neon-Green);
+    letter-spacing: .2rem;
+}
+
+.advice__text
+{
+    text-align: center;
+    line-height: 1.5rem;
+    max-inline-size: 35ch;
+
+}
+.advice__text--fadeOut
+{
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    
+}
+
+.advice__text--fadeIn
+{
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+
+.advice__id::before
+{
+    content: "advice #";
+}
+
+
+.advice__text::before,.advice__text::after
+{
+    content:'"';
+}
+
+
+
+.advice-generator
+{
+    background-color: var(--Neon-Green);
+    padding: 1rem;
+    border: none;
+    border-radius: 55px;
+    position: absolute;
+    display: flex;
+    justify-self: center;
+    bottom: -1.5rem;
+}
+
+
+.advice-generator:hover
+{
+  box-shadow:0px 0px 35px var(--Neon-Green);
+}
+
+/* key frames (escenas)*/
+
+@keyframes fadeOut
+{
+    0%{
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
